@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package transaction_verification;
+
+service TransactionVerificationService {
+    rpc VerifyTransaction (VerifyRequest) returns (VerifyResponse);
+}
+
+message VerifyRequest {
+    message User {
+        string name = 1;
+        string contact = 2;
+    }
+    message Item {
+        string name = 1;
+        int32 quantity = 2;
+    }
+    User user = 1;
+    string card_number = 2;
+    repeated Item items = 3;
+}
+
+message VerifyResponse {
+    bool is_valid = 1;
+    string message = 2;
+}
