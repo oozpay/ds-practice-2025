@@ -49,4 +49,4 @@ When a user clicks "Submit Order," the following sequence occurs:
 ---
 
 ## Architecture
-![System Architecture](./docs/diagrams/system_architecture.png)
+![System Architecture](./diagrams/system_architecture.png)
